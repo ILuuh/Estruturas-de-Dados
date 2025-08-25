@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Criando um objeto para um único produto
+        var listaProduto = [{
+            nome: "Notebook",
+            preco: 1000,
+            emEstoque: true
+        },
+        {
+            nome: "Mouse",
+            preco: 200,
+            emEstoque: false
+        },
+        {
+            nome: "Teclado",
+            preco: 450,
+            emEstoque: true
+        }]
+
+        // Exibindo no documento
+        document.write("Listas de Prdoutos:" + "<br><br>");
+        for (i = 0; i < 3; i++) {
+            document.write("Produto: " + listaProduto[i].nome + "<br>");
+            document.write("Preço: R$" + listaProduto[i].preco + ",00<br>");
+            document.write("Em Estoque: " + listaProduto[i].emEstoque + "<br><br>");
+        }
+
+    </script>
+
+</body>
+
+</html>
