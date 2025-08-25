@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const MAX = 5;
+        var v = [];
+        var i, valor, encontrou;
+
+        // Grava os elementos no vetor
+        for (i = 0; i < MAX; i++) {
+            valor = Number(window.prompt(`Digite o ${i}º elemento do vetor:`));
+            v.push(valor);
+        }
+
+        // Lista os elementos do vetor
+        document.write("Valores no vetor:" + "<br>");
+        for (i = 0; i < MAX; i++) {
+            document.write(`${i}: ${v[i]}` + '<br>');
+        }
+
+        document.write("Posições onde o valor é maior que 10:" + "<br>")
+        encontrou = false;
+        for (i = 0; i < MAX; i++) {
+
+            if (v[i] > 10) {
+
+                document.write(`O valor maior que 10 foi encontrado na posição ${i}.` + "<br>");
+                encontrou = true;
+
+            }
+
+        }
+
+        if (!encontrou) {
+            document.write('<br>');
+            document.write("Não existe valores maiores que 10 no vetor.");
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const MAX = 5;
+        var v = [];
+        var i, valor, encontrou, par;
+
+        // Grava os elementos no vetor
+        for (i = 0; i < MAX; i++) {
+            valor = Number(window.prompt(`Digite o ${i}º elemento do vetor:`));
+            v.push(valor);
+        }
+
+        // Lista os elementos do vetor
+        document.write("Valores no vetor:" + "<br>");
+        for (i = 0; i < MAX; i++) {
+            document.write(`${i}: ${v[i]}` + '<br>');
+        }
+
+        document.write("Posições onde o valor é par:" + "<br>")
+        encontrou = false;
+        for (i = 0; i < MAX; i++) {
+
+            if (v[i] % 2 == 0) {
+                document.write(`Posição que o valor é par ${i}.` + "<br>");
+                v[i] = 0; // Correção aqui
+                encontrou = true;
+            }
+        }
+
+        // Lista os elementos do vetor depois da substituição dos valores pares
+        document.write("Valores no vetor depois da substituição dos valores pares:" + "<br>");
+        for (i = 0; i < MAX; i++) {
+            document.write(`${i}: ${v[i]}` + '<br>');
+        }
+
+    </script>
+
+</body>
+
+</html>
