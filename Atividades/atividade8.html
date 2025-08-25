@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var listaProdutos = [];
+        var quantidade = 3; //quantidade de produtos a serem inseridos
+
+        for (var i = 0; i < quantidade; i++) {
+            var vnome = window.prompt("Digite um nome do produto " + (i + 1) + ":");
+            var vpreco = Number(window.prompt("Digite o preço do produto" + (i + 1) + ":"));
+            var vemEstoque = window.prompt("O produto está em estoque? (sim/não):");
+
+            listaProdutos.push({
+                nome: vnome,
+                preco: vpreco,
+                emEstoque: vemEstoque
+            });
+        }
+
+        document.write("<h3>Lista de Produtos:</h3>");
+        for (var i = 0; i < listaProdutos.length; i++) {
+            document.write("Produto: " + listaProdutos[i].nome + "<br>");
+            document.write("Preço: R$" + listaProdutos[i].preco.toFixed(2) + "<br>");
+            document.write("Em Estoque: " + listaProdutos[i].emEstoque + "<br><br>");
+        }
+
+        document.write("<h3>Lista de Produtos que tem em estoque:</h3>");
+        for (var i = 0; i < listaProdutos.length; i++) {
+            if (listaProdutos[i].emEstoque.toUpperCase() === "NÃO") {
+                document.write("Produto: " + listaProdutos[i].nome + "<br>");
+                document.write("Preço: R$" + listaProdutos[i].preco.toFixed(2) + "<br>");
+                document.write("Em Estoque: " + listaProdutos[i].emEstoque + "<br><br>");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
