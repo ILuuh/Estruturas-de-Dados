@@ -4,8 +4,6 @@ Este repositório contém uma coleção de exercícios desenvolvidos durante a d
 
 ## 📂 Conteúdo
 
-Os tópicos abordados estão organizados por temas, conforme descrito a seguir:
-
 - **Arrays**
   - Manipulação e operações básicas
   - Métodos nativos do JavaScript
