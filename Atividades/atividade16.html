@@ -10,17 +10,17 @@
 
 <body>
     <script>
-        var converter= function(bytes) {
+        var converter = function (bytes) {
             kilobyte = bytes / 1024
             megabyte = kilobyte / 1024
             gigabyte = megabyte / 1024
-            
+
             document.write(`A valor de bytes em kilobytes é: ${kilobyte} ${"<br>"}`)
             document.write(`A valor de kilobytes em megabytes é: ${megabyte} ${"<br>"}`)
             document.write(`A valor de bytes em kilobytes é: ${gigabyte} ${"<br>"}`)
         }
 
-        var qtdebytes = Number(window.prompt("Digite uma quantidade de bytes: ")) 
+        var qtdebytes = Number(window.prompt("Digite uma quantidade de bytes: "))
         converter(qtdebytes)
     </script>
 

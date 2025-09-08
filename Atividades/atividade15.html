@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var mostraremdias = (qtdedias, qtdemeses, qtdeanos) => {
+            idadeemdias = qtdeanos * 365 + qtdemeses * 30 + qtdedias;
+            document.write(`Sua idade em dias é: ${idadeemdias}`)
+        }
+
+        var dias = Number(window.prompt('Digite a quantidade de dias que passou do seu aniverário: '))
+        var meses = Number(window.prompt('Digite a quantidade de meses que passou do seu aniverário: '))
+        var anos = Number(window.prompt('Digite a quantidade de anos que passou do seu aniverário: '))
+
+        mostraremdias(dias,meses,anos)
+
+    </script>
+
+</body>
+
+</html>

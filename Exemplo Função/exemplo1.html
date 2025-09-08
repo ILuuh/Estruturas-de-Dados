@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var v1, v2;
+
+        function soma(p1,p2){
+            var res = p1+p2;
+            return res
+        }
+
+        function subtrair(p1,p2) {
+            var res = p1 - p2;
+            document.write("<br>"+`Subtração: ${res}` )
+        }
+
+        v1 = Number(window.prompt('Digite V1: '))
+        v2 = Number(window.prompt('Digite V2: '))
+        document.write(`Soma: ${soma(v1,v2)}`)
+        subtrair(v1,v2)
+    </script>
+</body>
+</html>
