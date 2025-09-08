@@ -27,10 +27,10 @@
             document.write(`${i}: ${v[i]}` + '<br>');
         }
 
-        //Ordenação em order crescente
+        //Ordenação em order decrescente
         for (i = 0; i < MAX; i++) {
             for (j = 0; j < MAX - 1; j++) {
-                if (v[j] > v[j + 1]) {
+                if (v[j] < v[j + 1]) {
                     aux = v[j + 1]
                     v[j + 1] = v[j]
                     v[j] = aux
@@ -39,16 +39,10 @@
         }
 
         // Lista os elementos do vetor ordenados
-        document.write("<br>" + "Valores no vetor ordenados:" + "<br>");
+        document.write("<br>"+"Valores no vetor ordenados:" + "<br>");
         for (i = 0; i < MAX; i++) {
             document.write(`${i}: ${v[i]}` + '<br>');
         }
-
-        //Lista da diferencia entre o menor e maior valor
-        document.write("<br>" + "Valor da diferencia:" + "<br>");
-        document.write(`Menor valor do vetor: ${v[0]}` + "<br>")
-        document.write(`Maior valor do vetor: ${v[MAX - 1]}` + "<br>")
-        document.write(`Diferencia entre o maior e menor: ${v[MAX - 1] - v[0]}`)
 
     </script>
 

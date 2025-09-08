@@ -11,7 +11,7 @@
 <body>
     <script>
 
-        const MAX = 10;
+        const MAX = 5;
         var v = [];
         var i, valor, j, aux;
 
@@ -39,16 +39,15 @@
         }
 
         // Lista os elementos do vetor ordenados
-        document.write("<br>" + "Valores no vetor ordenados:" + "<br>");
+        document.write("<br>"+"Valores no vetor ordenados:" + "<br>");
         for (i = 0; i < MAX; i++) {
             document.write(`${i}: ${v[i]}` + '<br>');
         }
 
-        //Lista da diferencia entre o menor e maior valor
-        document.write("<br>" + "Valor da diferencia:" + "<br>");
+        //Lista os elementos maior e menor
+        document.write("<br>"+"Valores no vetor menor e maior:" + "<br>");
         document.write(`Menor valor do vetor: ${v[0]}` + "<br>")
-        document.write(`Maior valor do vetor: ${v[MAX - 1]}` + "<br>")
-        document.write(`Diferencia entre o maior e menor: ${v[MAX - 1] - v[0]}`)
+        document.write(`Maior valor do vetor: ${v[MAX-1]}`)
 
     </script>
 
