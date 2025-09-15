@@ -9,20 +9,22 @@
 </head>
 
 <body>
+
     <script>
-        function exibirPar(n) {
+
+        function exibir(n) {
 
             document.write(n + '<br>')
             //condição parada da função
-            if (n == 20) {
-                return 20
+            if (n == 1) {
+                return 1
             }
             //passo recursivo
-            return exibirPar(n + 2)
+            return exibir(n - 1)
         }
-        exibirPar(2)
-    </script>
+        exibir(10)
 
+    </script>
 
 </body>
 

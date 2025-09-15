@@ -10,17 +10,15 @@
 
 <body>
     <script>
-        function exibirPar(n) {
-
-            document.write(n + '<br>')
-            //condição parada da função
-            if (n == 20) {
-                return 20
+        function Fatorial(n) {
+            //condição parada
+            if (n == 1) {
+                return 1
             }
-            //passo recursivo
-            return exibirPar(n + 2)
+            //Passo recursivo
+            return n * Fatorial(n - 1)
         }
-        exibirPar(2)
+        document.write(Fatorial(5))
     </script>
 
 
