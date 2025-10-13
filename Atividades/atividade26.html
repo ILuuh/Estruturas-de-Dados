@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        itens = []
+
+        //Enfileirar(Inserir final fila)
+        function gravarNaFila(elemento) {
+            itens.push(elemento)
+        }
+
+        //Desinfileirar(Retirar do inicio)
+        function retirarDaFila() {
+            if (estaVazia()) {
+                return "Fila vazia"
+            }
+            else {
+                return itens.shift()
+            }
+        }
+
+        //Function varificar se a fila vazia
+        function estaVazia() {
+            if (itens.length == 0) {
+                return true
+
+            } else {
+                return false
+
+            }
+        }
+
+        //Verificar quem é o inico da fila
+        function inicio() {
+            if (estaVazia()) {
+                return "Fila vazia"
+            } else {
+                return itens[0]
+            }
+        }
+
+        //Verficar o tamanho da fila
+        function tamanhoDaFila() {
+            return itens.length
+        }
+
+        //Exibir a fila
+        function imprimir() {
+            document.write(itens.join("<-"))
+        }
+
+        //Programa Principal utilizando as funções
+        gravarNaFila('C1')
+        gravarNaFila('C2')
+        gravarNaFila('C3')
+        gravarNaFila('C4')
+        gravarNaFila('C5')
+
+        //Mostrar o que foi gravado na fila
+        imprimir()
+        document.write("<br>")
+        document.write("Simulando: ")
+        document.write("<br>")
+        document.write(retirarDaFila())
+        document.write("<br>")
+        document.write("<br>")
+        document.write("Atendimento: ")
+        document.write("<br>")
+        document.write(retirarDaFila())
+        document.write("<br>")
+        document.write("<br>")
+        document.write("Aguardando: ")
+        imprimir()
+
+    </script>
+</body>
+
+</html>
