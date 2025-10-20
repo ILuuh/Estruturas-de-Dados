@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        
+        let itens = []
+        
+        //GRAVAR NA PILHA
+        function gravarNaPilha(elemento) {
+            itens.push(elemento)
+        }
+
+        //REMOVER DA PILHA
+        function removerDaPilha(elemento) {
+            if (estaVazia()) {
+                return "Pilha Vazia"
+            }
+            else{
+                return itens.pop()
+            }
+        }
+
+        //MOSTRAR QUEM ESTÁ NO TOPO
+        function topo() {
+            if (estaVazia()) {
+                return "Pilha Vazia"
+            } else {
+                return itens[itens.length - 1]
+            }
+        }
+
+        //FUNCTION VERIFICAR SE A PILHA ESTÁ VAZIA
+        function estaVazia() {
+            if (itens.length == 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+         //VERIFICAR O TAMANHO DA PILHA
+         function tamanhoDaPilha() {
+            return itens.length
+        }
+
+         //EXIBIR OS VALORES NA PILHA
+         function imprimir() {
+            document.write(itens.join("<-"))
+        }
+
+        //Programa Principal utilizando as funções
+        gravarNaPilha('A')
+        gravarNaPilha('B')
+        gravarNaPilha('C')
+
+        //Mostrar o que foi gravado na fila
+        imprimir()
+        document.write("<br>")
+        document.write(removerDaPilha())
+        document.write("<br>")
+        imprimir()
+
+
+
+    </script>
+
+</body>
+
+</html>
